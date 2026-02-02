@@ -1,86 +1,85 @@
-# Welcome to React Router!
+````md
+# Elite Beauty Studio
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A web application for a beauty salon featuring a public website, an appointment booking flow, and an AI-powered booking assistant.
 
-## Features
+This repository contains a complete frontend and backend implementation intended for demonstration, learning, and extension.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+---
 
-## Getting Started
+## Overview
 
-### Installation
+The application provides:
 
-Install the dependencies:
+- A public-facing website with marketing pages
+- A multi-step appointment booking flow
+- An AI chat widget that helps users understand services and navigate to booking
+
+The AI assistant is designed to guide users only and does not perform real bookings or store personal data.
+
+---
+
+## Main Features
+
+- Public pages: home, services, team, gallery, contact
+- Guided booking flow with service, date, and time selection
+- Floating AI chat assistant available on public pages
+- Responsive layout for mobile, tablet, and desktop
+- Type-safe data models shared across the app
+
+---
+
+## AI Assistant Behavior
+
+The chatbot:
+
+- Explains only the services defined in the application data
+- Guides users to the booking page when they want to book
+- Does not confirm appointments
+- Does not accept or store personal information
+- Does not invent services, prices, or availability
+
+Responses support basic markdown formatting such as paragraphs and bullet lists.
+
+---
+
+## Tech Stack
+
+- React
+- TypeScript
+- React Router (server actions)
+- Tailwind CSS
+- Node.js
+- Groq API for language model inference
+
+---
+
+## Development
+
+Install dependencies:
 
 ```bash
 npm install
-```
+````
 
-### Development
-
-Start the development server with HMR:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The application will be available at:
 
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
+```text
+http://localhost:3000
 ```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── server.js
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+## Environment Variables
+
+Create a `.env` file with the following:
+
+```env
+GROQ_API_KEY=your_api_key_here
+```
