@@ -1,4 +1,3 @@
-````md
 # Elite Beauty Studio
 
 A web application for a beauty salon featuring a public website, an appointment booking flow, and an AI-powered booking assistant.
